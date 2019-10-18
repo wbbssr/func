@@ -41,6 +41,8 @@ public:
   unsigned num_intervals(){ return m_numIntervals; };
   void print_details(std::ostream&) override;
   std::pair<double,double> arg_bounds_of_interval(unsigned);
+  std::unique_ptr<double[]> test_return_table() { return std::move(m_table); };
+  std::unique_ptr<double[]> test_return_grid() { return std::move(m_grid); };
 };
 
 /* ////////////////////////////////////////////////////////////////////////////
